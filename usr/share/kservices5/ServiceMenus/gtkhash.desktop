@@ -1,0 +1,11 @@
+[Desktop Action gtkhash]
+Exec=gtkhash %f
+Icon=gtkhash
+Name=GTK hash of file
+
+[Desktop Entry]
+Actions=gtkhash
+Encoding=UTF-8
+Icon=gtkhash
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin,all/allfiles

@@ -1,0 +1,10 @@
+[Desktop Entry]
+DefaultProfile=SolydK.profile
+
+[General]
+EditableUrl=true
+GlobalViewProps=true
+ShowFullPath=true
+
+[PreviewSettings]
+Plugins=directorythumbnail,imagethumbnail,jpegthumbnail,svgthumbnail

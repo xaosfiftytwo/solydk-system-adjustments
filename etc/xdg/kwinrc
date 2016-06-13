@@ -1,0 +1,5 @@
+[TabBox]
+LayoutName=org.kde.solydk.desktop
+
+[TabBoxAlternative]
+LayoutName=org.kde.solydk.desktop 

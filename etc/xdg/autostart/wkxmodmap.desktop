@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Super key launcher shortcut for KDE
+Exec=xmodmap -e 'keycode 133 = F13'
+Terminal=false
+Type=Application
+StartupNotify=false
+OnlyShowIn=KDE;

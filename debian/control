@@ -1,0 +1,15 @@
+Source: solydk-system-adjustments
+Section: admin
+Priority: optional
+Maintainer: Arjen Balfoort <arjenbalfoort@solydxk.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+
+Package: solydk-system-adjustments
+Architecture: all
+Depends: qtcurve, evolvere-icon-theme-additional, evolvere-icon-theme-vivid-sunken, evolvere-icon-theme-blue-folders, evolvere-icon-theme-black-folders, solydxk-mozilla-evolvere-icon-theme, oxygencursors, gtk2-engines-pixbuf, gtkhash
+Recommends: plymouth, lightdm, lightdm-gtk-greeter, baloo
+Conflicts: solydx-system-adjustments, plymouth-themes-solydk, solydk-artwork, solydk-grub2-theme, solydk-lightdm-adjustments, plymouth-themes-solydkbe, solydkbe-artwork, solydkbe-grub2-theme, solydkbe-lightdm-adjustments, solydkbe-system-adjustments, plymouth-themes-solydkbo, solydkbo-artwork, solydkbo-grub2-theme, solydkbo-lightdm-adjustments, solydkbo-system-adjustments
+Replaces: plymouth-themes-solydk, solydk-artwork, solydk-grub2-theme, solydk-lightdm-adjustments, plymouth-themes-solydkbe, solydkbe-artwork, solydkbe-grub2-theme, solydkbe-lightdm-adjustments, solydkbe-system-adjustments, plymouth-themes-solydkbo, solydkbo-artwork, solydkbo-grub2-theme, solydkbo-lightdm-adjustments, solydkbo-system-adjustments
+Description: Adjustments specific to SolydK.
+ This includes configuration and graphical changes.

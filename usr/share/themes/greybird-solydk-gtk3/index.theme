@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Greybird
+Comment=Greybird Gtk3 only theme for SolydK
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Greybird
+MetacityTheme=Greybird
+IconTheme=evolvere-blue-folders-flat-vivid
+CursorTheme=oxy-white
+ButtonLayout=:minimize,maximize,close

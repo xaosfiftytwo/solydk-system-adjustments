@@ -1,0 +1,6 @@
+/usr/lib/solydxk/adjustments/user-dirs-defaults /etc/xdg/user-dirs-defaults
+/usr/lib/solydxk/adjustments/.bashrc /etc/skel/.bashrc
+/usr/lib/solydxk/adjustments/bash.bashrc /etc/bash.bashrc
+/usr/share/solydxk/adjustments/plasma_desktoptheme_default_metadata.desktop /usr/share/plasma/desktoptheme/default/metadata.desktop
+/usr/share/solydxk/adjustments/plasma_layout-templates_org.kde.plasma.desktop.defaultPanel_contents_layout.js /usr/share/plasma/layout-templates/org.kde.plasma.desktop.defaultPanel/contents/layout.js
+/usr/share/solydxk/adjustments/plasma_shells_org.kde.plasma.desktop_contents_layout.js /usr/share/plasma/shells/org.kde.plasma.desktop/contents/layout.js

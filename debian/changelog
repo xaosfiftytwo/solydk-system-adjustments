@@ -1,0 +1,256 @@
+solydk-system-adjustments (2.5.8) solydxk; urgency=low
+
+  * Replace LibreOffice start menu favorite
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Mon, 06 Jun 2016 16:14:54 +0200
+
+solydk-system-adjustments (2.5.7) solydxk; urgency=low
+
+  * Updated mimeapps.list
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Thu, 02 Jun 2016 10:56:46 +0200
+
+solydk-system-adjustments (2.5.6) solydxk; urgency=low
+
+  * Added /etc/xdg/kglobalshortcutsrc to configure win key opening start menu
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Fri, 15 Apr 2016 14:02:04 +0200
+
+solydk-system-adjustments (2.5.5) solydxk; urgency=low
+
+  * Removed trigger on solydxk-system service
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sat, 19 Mar 2016 10:30:23 +0100
+
+solydk-system-adjustments (2.5.4) solydxk; urgency=low
+
+  * Moved /etc/skel/.gnupg to solydxk-system package
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sat, 27 Feb 2016 16:00:00 +0100
+
+solydk-system-adjustments (2.5.3) solydxk; urgency=low
+
+  * Add sha512sum to Service Menu
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Mon, 22 Jan 2016 10:00:00 +0100
+
+solydk-system-adjustments (2.5.2) solydxk; urgency=low
+
+  * Added new default flat design
+  * Changed desktop layout to folderview
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Fri, 29 Jan 2016 18:00:00 +0100
+
+solydk-system-adjustments (2.2.0) solydxk; urgency=low
+
+  * Updated mimeapps.list
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Mon, 18 Jan 2016 19:00:00 +0100
+
+solydk-system-adjustments (2.1.9) solydxk; urgency=low
+
+  * Updated for EE
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sun, 29 Nov 2015 13:05:34 +0100
+
+solydk-system-adjustments (2.1.8) solydxk; urgency=low
+
+  * Fix for SolydK BO users
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Thu, 22 Oct 2015 21:00:00 +0100
+
+solydk-system-adjustments (2.1.7) solydxk; urgency=low
+
+  * Added female user picture
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Wed, 07 Oct 2015 12:00:00 +0100
+
+solydk-system-adjustments (2.1.6) solydxk; urgency=low
+
+  * Resolved theme bug for PlayOnLinux (and probably others) to switch Gtk theme to oxygen-gtk
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Thu, 10 Sep 2015 10:00:00 +0100
+
+solydk-system-adjustments (2.1.5) solydxk; urgency=low
+
+  * Added fancy progressbar with ANSI 256 color codes for terminal
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Wed, 19 Aug 2015 17:00:00 +0100
+
+solydk-system-adjustments (2.1.1) solydxk; urgency=low
+
+  * Resolved issue inserting duplicate keys in LightDM configuration
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sun, 17 May 2015 14:00:00 +0100
+
+solydk-system-adjustments (2.1.0) solydxk; urgency=low
+
+  * Changed LightDM configuration for Debian testing
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Fri, 15 May 2015 11:00:00 +0100
+
+solydk-system-adjustments (2.0.9) solydxk; urgency=low
+
+  * Divert Lines wallpapers
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Mon, 27 Apr 2015 10:00:00 +0100
+
+solydk-system-adjustments (2.0.8) solydxk; urgency=low
+
+  * Make baloo a recommended package, not a dependency
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Tue, 17 Mar 2015 18:00:00 +0100
+
+solydk-system-adjustments (2.0.7) solydxk; urgency=low
+
+  * Do not update-grub for armhf
+  * Added dependencies gtk2-engines-pixbuf, oxygencursors
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Fri, 13 Mar 2015 10:00:00 +0100
+
+solydk-system-adjustments (2.0.6) solydxk; urgency=low
+
+  * Added resolutions for ksplash theme
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sat, 07 Mar 2015 23:00:00 +0100
+
+solydk-system-adjustments (2.0.5) solydxk; urgency=low
+
+  * Moved python-apt templates to solydxk-system
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Thu, 05 Mar 2015 11:00:00 +0100
+
+solydk-system-adjustments (2.0.4) solydxk; urgency=low
+
+  * Changed evolvere dependency
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Wed, 18 Feb 2015 19:00:00 +0100
+
+solydk-system-adjustments (2.0.2) solydxk; urgency=low
+
+  * greybird-solydk-gtk3 theme updated
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sat, 07 Feb 2015 11:00:00 +0100
+
+solydk-system-adjustments (2.0.0) solydxk; urgency=low
+
+  * Merged with: plymouth-themes-solydk, solydk-artwork, solydk-grub2-theme, solydk-lightdm-adjustments
+  * Changed to QtCurve instead of Oxygen theme
+  * Changed to Evolvere icon theme
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sun, 14 Sep 2014 17:00:00 +0100
+
+solydk-system-adjustments (1.3.3) solydxk; urgency=low
+
+  * Automount detachable USB devices
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Thu, 28 Aug 2014 09:00:00 +0100
+
+solydk-system-adjustments (1.3.2) solydxk; urgency=low
+
+  * Removed skel files for chromium
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Mon, 04 Aug 2014 21:00:00 +0100
+
+solydk-system-adjustments (1.3.1) solydxk; urgency=low
+
+  * Changed Kickoff menu favorites list
+  * Added password-less printer configuration and mounts
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Mon, 07 Jul 2014 13:00:00 +0100
+
+solydk-system-adjustments (1.3.0) solydxk; urgency=low
+
+  * Removed startkde: now part of kde-workspace-bin
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Fri, 20 Jun 2014 14:00:00 +0100
+
+solydk-system-adjustments (1.2.9) solydxk; urgency=low
+
+  * Default font to Clear Sans
+  * Xhost security issue resolved
+  * Divert non-solyd wallpapers
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Thu, 17 Apr 2014 12:00:00 +0100
+
+solydk-system-adjustments (1.2.5) solydxk; urgency=low
+
+  * Removed Firefox settings
+  * Restart pulseaudio after sleep
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Fri, 07 Feb 2014 18:00:00 +0100
+
+solydk-system-adjustments (1.2.0) solydxk; urgency=low
+
+  * Removed Thunderbird settings
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Thu, 06 Feb 2014 14:00:00 +0100
+
+solydk-system-adjustments (1.1.9) solydxk; urgency=low
+
+  * Changed default font from Ubuntu to Arial
+  * Fix kgpg init
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Tue, 12 Nov 2013 16:00:00 +0100
+
+solydk-system-adjustments (1.1.7) solydxk; urgency=low
+
+  * Set spell checker on by default
+  * Set Firefox as default browser
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Thu, 31 Oct 2013 16:00:00 +0100
+
+solydk-system-adjustments (1.1.5) solydxk; urgency=low
+
+  * Added kgpg-fix
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Fri, 13 Sep 2013 13:00:00 +0100
+
+solydk-system-adjustments (1.1.4) solydxk; urgency=low
+
+  * Removed lsb-release
+  * Removed overwrite of kdmrc
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Thu, 29 Aug 2013 10:00:00 +0100
+
+solydk-system-adjustments (1.0.9) solydxk; urgency=low
+
+  * Diverted /usr/share/kde4/apps/plasma-desktop/updates/addShowActivitiesManagerPlasmoid.js
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Tue, 06 Aug 2013 14:30:00 +0100
+
+solydk-system-adjustments (1.0.8) solydxk; urgency=low
+
+  * Changed lsb-release
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sun, 26 Mar 2013 14:30:00 +0100
+
+ solydk-system-adjustments (1.0.6) solydxk; urgency=low
+
+  * Disable Thunderbird updates
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Fri, 22 Mar 2013 10:30:00 +0100
+
+solydk-system-adjustments (1.0.3) solydxk; urgency=low
+
+  * Improved postinst
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Wed, 13 Mar 2013 14:00:00 +0100
+
+solydk-system-adjustments (1.0.2) solydxk; urgency=low
+
+  * Minor bugfix not being detected by updatemanager version 1.0.2
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Tue, 26 Feb 2013 19:00:00 +0100
+
+solydk-system-adjustments (1.0.1) solydxk; urgency=low
+
+  * Minor bugfix in postinst version 1.0.1
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sat, 23 Feb 2013 13:00:00 +0100
+
+solydk-system-adjustments (1.0.0) solydxk; urgency=low
+
+  * Initial version 1.0.0
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Tue, 23 Jan 2013 08:30:00 +0100

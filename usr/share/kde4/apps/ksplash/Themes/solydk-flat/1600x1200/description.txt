@@ -1,0 +1,18 @@
+# SolydK KSplash Theme created by Arjen Balfoort <arjenbalfoort@solydxk.com>
+
+SCALE ON
+BACKGROUND_IMAGE 0 0 background.png
+SCALE OFF
+
+IMAGE_REL CC 0 -25 CC logo.png
+
+IMAGE_REL CC 0 +60 CC p0.png
+#WAIT_STATE initial
+IMAGE_REL CC 0 +60 CC p1.png
+WAIT_STATE kcminit
+IMAGE_REL CC 0 +60 CC p2.png
+WAIT_STATE wm
+IMAGE_REL CC 0 +60 CC p3.png
+WAIT_STATE desktop
+IMAGE_REL CC 0 +60 CC p4.png
+WAIT_STATE ready

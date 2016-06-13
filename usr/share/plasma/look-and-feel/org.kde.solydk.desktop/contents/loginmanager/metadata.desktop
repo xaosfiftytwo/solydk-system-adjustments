@@ -1,0 +1,16 @@
+[SddmGreeterTheme]
+Name=SolydK
+Description=SolydK Theme
+Author=Arjen Balfoort
+Copyright=(c) 2016, Arjen Balfoort
+License=CC-BY-SA
+Type=sddm-theme
+Version=0.1
+Website=https://github.com/sddm/sddm
+Screenshot=solydk.jpg
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Email=arjenbalfoort@solydxk.com
+Theme-Id=solydk-flat
+Theme-API=2.0

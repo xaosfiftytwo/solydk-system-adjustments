@@ -1,0 +1,30 @@
+[KDE]
+ColorScheme=SolydK
+contrast=7
+widgetStyle=qtcurve
+ShowIconsInMenuItems=true
+ShowIconsOnPushButtons=true
+SingleClick=false
+LookAndFeelPackage=org.kde.solydk.desktop
+
+[General]
+ColorScheme=SolydK
+Name=SolydK
+XftAntialias=true
+XftHintStyle=hintmedium
+XftSubPixel=none
+desktopFont=Clear Sans,10,-1,5,50,0,0,0,0,0
+fixed=Monospace,10,-1,5,50,0,0,0,0,0
+font=Clear Sans,10,-1,5,50,0,0,0,0,0
+menuFont=Clear Sans,10,-1,5,50,0,0,0,0,0
+shadeSortColumn=true
+smallestReadableFont=Clear Sans,9,-1,5,50,0,0,0,0,0
+taskbarFont=Clear Sans,10,-1,5,50,0,0,0,0,0
+toolBarFont=Clear Sans,9,-1,5,50,0,0,0,0,0
+widgetStyle=qtcurve
+
+[Icons]
+Theme=evolvere-blue-folders-flat-vivid
+
+[WM]
+activeFont=Clear Sans,10,-1,5,75,0,0,0,0,0

@@ -1,0 +1,175 @@
+#!/bin/bash
+# postinst script 
+# see: dh_installdeb(1)
+
+set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+#
+
+# Function to divert file
+function divert {
+  if [ -f "$1" ]; then
+    dpkg-divert --add --rename --divert $1.divert $1
+  fi
+}
+
+function sed_append_sting {
+  PATTERN=$1
+  LINE=$2
+  FLE=$3
+
+  if [ -e $FLE ]; then
+    if grep -q $PATTERN "$FLE"; then
+      # Escape forward slashes
+      LINE=$(echo $LINE | sed 's/\//\\\//g')
+      sed -i -e "s/$PATTERN/$LINE/" $FLE
+    else
+      echo $LINE >> $FLE
+    fi
+  fi
+}
+
+case "$1" in    
+  configure|reconfigure)
+    # Configure LightDM
+    CONF='/etc/lightdm/lightdm-kde-greeter.conf'
+    if [ -e '/etc/lightdm/lightdm-gtk-greeter.conf' ]; then
+      CONF='/etc/lightdm/lightdm-gtk-greeter.conf'
+    fi
+    
+    sed_append_sting '^background\s*=.*' 'background=/usr/share/images/desktop-base/solydk-lightdmbg-flat.png' $CONF
+    sed_append_sting '^theme-name\s*=.*' 'theme-name=greybird-solydk-gtk3' $CONF
+    sed_append_sting '^default-user-image\s*=.*' 'default-user-image=/usr/share/pixmaps/faces/user-generic.png' $CONF
+
+    CONF='/etc/lightdm/lightdm.conf'
+    if [ -e $CONF ]; then
+      sed -i -e '/^greeter-hide-users\s*=/ c greeter-hide-users=false' $CONF
+    fi
+    
+    # This conf file sets user-session to kde-plasma-kf5. Unfortunately, the
+    # file in /usr/share/xsessions is called plasma.desktop and not
+    # kde-plasma-kf5.desktop. The default desktop file there still works, so...
+    CONF='/usr/share/lightdm/lightdm.conf.d/40-kde-plasma-kf5.conf'
+    if [ -e $CONF ]; then
+      KF5DT='/usr/share/xsessions/kde-plasma-kf5.desktop'
+      PDT='/usr/share/xsessions/plasma.desktop'
+      if [ ! -e $KF5DT ]; then
+        if [ -e $PDT ]; then
+	  ln -s $PDT $KF5DT
+        else
+	  divert $CONF
+        fi
+      fi
+    fi
+
+    # Set splash theme
+    #RC='/usr/share/desktop-base/profiles/kde-profile/share/config/ksplashrc'
+    #if [ -e $RC ]; then
+    #  sed -i 's/"Default"/solydk-flat/' $RC
+    #fi
+
+    # Set the gconf show_fortunes bool to false.
+    if [ -x "/usr/bin/gconftool-2" ]; then
+      gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults --type bool --set /desktop/solydxk/terminal/show_fortunes false
+    fi
+
+    # Divert debian menu
+    divert '/etc/xdg/menus/debian-menu.menu'
+
+    # Divert default plasma layout scripts
+    divert '/usr/share/kde4/apps/plasma-desktop/init/00-defaultLayout.js'
+    divert '/usr/share/kde4/apps/plasma-desktop/init/10-desktop-base.js'
+    divert '/usr/share/kde4/apps/plasma-desktop/updates/addShowActivitiesManagerPlasmoid.js'
+
+    # Divert wallpapers
+    divert '/usr/share/wallpapers/Elarun/contents/images/2560x1600.png'
+    divert '/usr/share/wallpapers/Elarun/contents/screenshot.png'
+    divert '/usr/share/wallpapers/Elarun/metadata.desktop'
+
+    divert '/usr/share/wallpapers/joy/contents/images/1024x768.png'
+    divert '/usr/share/wallpapers/joy/contents/images/1280x800.png'
+    divert '/usr/share/wallpapers/joy/contents/images/1280x1024.png'
+    divert '/usr/share/wallpapers/joy/contents/images/1366x768.png'
+    divert '/usr/share/wallpapers/joy/contents/images/1600x1200.png'
+    divert '/usr/share/wallpapers/joy/contents/images/1920x1080.png'
+    divert '/usr/share/wallpapers/joy/contents/images/1920x1200.png'
+    divert '/usr/share/wallpapers/joy/contents/screenshot.png'
+    divert '/usr/share/wallpapers/joy/metadata.desktop'
+
+    divert '/usr/share/wallpapers/joy_inksplat/contents/images/1024x768.png'
+    divert '/usr/share/wallpapers/joy_inksplat/contents/images/1280x800.png'
+    divert '/usr/share/wallpapers/joy_inksplat/contents/images/1280x1024.png'
+    divert '/usr/share/wallpapers/joy_inksplat/contents/images/1366x768.png'
+    divert '/usr/share/wallpapers/joy_inksplat/contents/images/1600x1200.png'
+    divert '/usr/share/wallpapers/joy_inksplat/contents/images/1920x1080.png'
+    divert '/usr/share/wallpapers/joy_inksplat/contents/images/1920x1200.png'
+    divert '/usr/share/wallpapers/joy_inksplat/contents/screenshot.png'
+    divert '/usr/share/wallpapers/joy_inksplat/metadata.desktop'
+
+    divert '/usr/share/wallpapers/Lines/contents/images/1024x768.png'
+    divert '/usr/share/wallpapers/Lines/contents/images/1280x1024.png'
+    divert '/usr/share/wallpapers/Lines/contents/images/1600x1200.png'
+    divert '/usr/share/wallpapers/Lines/contents/images/1920x1080.png'
+    divert '/usr/share/wallpapers/Lines/contents/images/1920x1200.png'
+    divert '/usr/share/wallpapers/Lines/contents/images/2560x1080.png'
+    divert '/usr/share/wallpapers/Lines/contents/screenshot.png'
+    divert '/usr/share/wallpapers/Lines/metadata.desktop'
+
+    divert '/usr/share/wallpapers/Next/contents/images/1024x768.png'
+    divert '/usr/share/wallpapers/Next/contents/images/1280x800.png'
+    divert '/usr/share/wallpapers/Next/contents/images/1280x1024.png'
+    divert '/usr/share/wallpapers/Next/contents/images/1366x768.png'
+    divert '/usr/share/wallpapers/Next/contents/images/1440x900.png'
+    divert '/usr/share/wallpapers/Next/contents/images/1600x1200.png'
+    divert '/usr/share/wallpapers/Next/contents/images/1638x1024.png'
+    divert '/usr/share/wallpapers/Next/contents/images/1680x1050.png'
+    divert '/usr/share/wallpapers/Next/contents/images/1920x1080.png'
+    divert '/usr/share/wallpapers/Next/contents/images/1920x1200.png'
+    divert '/usr/share/wallpapers/Next/contents/images/2560x1440.png'
+    divert '/usr/share/wallpapers/Next/contents/images/2560x1600.png'
+    divert '/usr/share/wallpapers/Next/contents/images/3200x1800.png'
+    divert '/usr/share/wallpapers/Next/contents/images/3200x2000.png'
+    divert '/usr/share/wallpapers/Next/contents/screenshot.png'
+    divert '/usr/share/wallpapers/Next/metadata.desktop'
+
+    /usr/lib/solydxk/system/adjust.py
+    FC=$(which fc-cache)
+    if [ "$FC" != "" ]; then
+      fc-cache -f
+    fi
+    UG=$(which update-grub)
+    if [ "$UG" != "" ]; then
+      update-grub
+    fi
+    
+  ;;
+
+  upgrade|update)
+  ;;
+
+  abort-upgrade|abort-remove|abort-deconfigure)
+  ;;
+
+  triggered)
+  ;;
+
+  *)
+    echo "postinst called with unknown argument \`$1'" >&2
+    exit 1
+  ;;
+esac
+
+# dh_installdeb will replace this with shell code automatically
+# generated by other debhelper scripts.
+
+exit 0

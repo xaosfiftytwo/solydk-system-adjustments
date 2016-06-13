@@ -1,0 +1,9 @@
+﻿[KSplash Theme: solydk]
+Name = SolydK Splash Screen
+Description = SolydK Splash Screen
+Version = 1.0
+Author = Arjen Balfoort <arjenbalfoort@solydxk.com> 
+Homepage = http://solydxk.com
+
+# Theme behaviour settings.
+Engine = KSplashX
